@@ -1,8 +1,8 @@
 # Site Config
 name: "IBM Make Lab"
-description: A basic Jekyll build set up with gulp, gulp-sass, browser-sync, and gulp-gh-pages
-baseurl: "/jekyll-gulp"
-url: https://matthewcpaul.github.io/jekyll-gulp
+description: A website for the IBM Make Lab
+baseurl: "/make-lab"
+url: https://matthewcpaul.github.io/make-lab
 
 # Build Settings
 markdown: kramdown

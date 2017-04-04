@@ -49,7 +49,12 @@ gulp.task('production-build', shell.task(['bundle exec jekyll build']));
 // Compile SCSS for production
 gulp.task('sass-production', ['production-build'], function() {
   return gulp.src('_styles/scss/style.scss')
-  .pipe(sass())
+  .pipe(sass({
+    includePaths: [
+      "node_modules/ibm-design-colors",
+      "node_modules/@whitewater/rapid/scss"
+    ]
+  }))
   .pipe(autoprefixer())
   .pipe(nano({discardComments: {removeAll: true}}))
   .pipe(gulp.dest('_site/assets/css'))
