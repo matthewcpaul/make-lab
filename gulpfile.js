@@ -11,9 +11,14 @@ var deploy       = require('gulp-gh-pages');
 // Compile SCSS into CSS, sourcemaps, autoprefixer, cssnano + auto-inject into browsers
 gulp.task('sass', function() {
   return gulp.src('_styles/scss/style.scss')
-  .pipe(sourcemaps.init())
-  .pipe(sass())
-  .pipe(sourcemaps.write())
+  // .pipe(sourcemaps.init())
+  .pipe(sass({
+    includePaths: [
+      "node_modules/ibm-design-colors",
+      "node_modules/@whitewater/rapid/scss"
+    ]
+  }))
+  // .pipe(sourcemaps.write())
   .pipe(autoprefixer())
   .pipe(gulp.dest('_styles/css'))
   .pipe(nano({discardComments: {removeAll: true}}))

@@ -1,11 +1,13 @@
 // Set the encoding of the style sheet to Unicode UTF-8
 @charset "UTF-8";
 
-// Fonts
-@import "https://fonts.googleapis.com/css?family=Open+Sans";
+// Import Rapid
+@import "rapid";
 
 // Variables
 @import "variables/_all";
+
+@include rapid-everything;
 
 // Base styles
 @import "base/_all";

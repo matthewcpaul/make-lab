@@ -1,4 +1,5 @@
 ---
 layout: default
-title: Make Lab
+title: Events
+order: 1
 ---

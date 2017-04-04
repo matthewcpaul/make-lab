@@ -12,16 +12,20 @@
 
 	<link rel="stylesheet" href="{{ "/assets/css/style.css" | prepend: site.baseurl }}">
 
-	<link rel="shortcut icon" href="{{ "/images/jekyll-gulp-logo.png" | prepend: site.baseurl }}"/>
+	<link rel="shortcut icon" href="{{ "/images/favicon.png" | prepend: site.baseurl }}"/>
 
 	<body>
-		<header class="o-wrap c-header" role="banner">
-			<a class="c-header__title" href="{{ "/" | prepend: site.baseurl }}">{{ site.name }}</a>
-			<nav class="c-header__nav" role="navigation">
-				<ul class="c-nav">{% assign pages = site.pages | sort:"order" %}{% for p in pages %}{% if p.order >= 1 %}
-					<li class="c-nav__item">
-						<a {% if p.url == page.url %}class="c-nav__link active"{% else %}class="c-nav__link"{% endif %} href="{{ p.url | prepend: site.baseurl }}">{{ p.title }}</a>
-					</li>{% endif %}{% endfor %}
-				</ul>
-			</nav>
-		</header>
+		<div class="o-band o-band--primary c-header--fixed">
+			<div class="o-wrap">
+				<header class="c-header" role="banner">
+					<a class="f-bold c-header__title" href="{{ "/" | prepend: site.baseurl }}">{{ site.name }}</a>
+					<nav class="" role="navigation">
+						<ul class="f-list-trim c-primary-nav">{% assign pages = site.pages | sort:"order" %}{% for p in pages %}{% if p.order >= 1 %}
+							<li class="c-primary-nav__item">
+								<a {% if p.url == page.url %}class="c-primary-nav__link active"{% else %}class="c-primary-nav__link"{% endif %} href="{{ p.url | prepend: site.baseurl }}">{{ p.title }}</a>
+							</li>{% endif %}{% endfor %}
+						</ul>
+					</nav>
+				</header>
+			</div>
+		</div>

@@ -1,0 +1,19 @@
+.c-pane {
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: spacing(lg);
+    opacity: 0;
+    background-color: $background-modal;
+    overflow: hidden;
+  }
+
+  &:hover .c-pane__overlay {
+    opacity: .8;
+    cursor: pointer;
+  }
+}
