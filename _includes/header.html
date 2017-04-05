@@ -18,7 +18,16 @@
 		<div class="o-band o-band--primary c-header--fixed">
 			<div class="o-wrap">
 				<header class="c-header" role="banner">
-					<a class="f-bold c-header__title" href="{{ "/" | prepend: site.baseurl }}">{{ site.name }}</a>
+					<div class="o-flag">
+    				<div class="o-flag__body">
+      				<a class="f-bold c-header__title" href="{{ "/" | prepend: site.baseurl }}">{{ site.name }}</a>
+    				</div>
+	    			<div class="o-flag__right c-header__menu u-pl-trim">
+		      		<svg class="c-header__svg" width="20" height="20" viewBox="0 0 20 20">
+		        		<use xlink:href="{{ "../images/icon-store.svg#hamburger_20" | prepend: site.baseurl }}"></use>
+		      		</svg>
+		    		</div>
+  				</div>
 					<nav class="" role="navigation">
 						<ul class="f-list-trim c-primary-nav">{% assign pages = site.pages | sort:"order" %}{% for p in pages %}{% if p.order >= 1 %}
 							<li class="c-primary-nav__item">

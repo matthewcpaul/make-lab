@@ -7,18 +7,18 @@ var sourcemaps   = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
 var browserSync  = require('browser-sync').create();
 var deploy       = require('gulp-gh-pages');
+var svgstore = require('gulp-svgstore');
+var rename = require('gulp-rename');
 
 // Compile SCSS into CSS, sourcemaps, autoprefixer, cssnano + auto-inject into browsers
 gulp.task('sass', function() {
   return gulp.src('_styles/scss/style.scss')
-  // .pipe(sourcemaps.init())
   .pipe(sass({
     includePaths: [
       "node_modules/ibm-design-colors",
       "node_modules/@whitewater/rapid/scss"
     ]
   }))
-  // .pipe(sourcemaps.write())
   .pipe(autoprefixer())
   .pipe(gulp.dest('_styles/css'))
   .pipe(nano({discardComments: {removeAll: true}}))
@@ -26,11 +26,20 @@ gulp.task('sass', function() {
   .pipe(browserSync.stream());
 });
 
+// Icons
+gulp.task("icons", () => {
+    return gulp.src(["node_modules/ibm-design-icons/dist/svg/**/*.svg", 'images/**/*.svg'])
+        .pipe(svgstore())
+        .pipe(rename("icon-store.svg"))
+        .pipe(gulp.dest("_site/images/"));
+});
+
+
 // Build incrementally with _config.yml + local_config.yml for development
 gulp.task('local-build', shell.task(['bundle exec jekyll build --config _config.yml,local_config.yml']));
 
 // Start a local server with browser-sync + watch for changes
-gulp.task('serve', ['sass', 'local-build'], function() {
+gulp.task('serve', ['sass', 'icons', 'local-build'], function() {
     browserSync.init({
         server: { baseDir: '_site/' }
     });
