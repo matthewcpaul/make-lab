@@ -69,8 +69,16 @@ gulp.task('sass-production', ['production-build'], function() {
   .pipe(gulp.dest('_site/assets/css'))
 });
 
+// Production icons
+gulp.task("icons", ['sass-production'], () => {
+    return gulp.src(["node_modules/ibm-design-icons/dist/svg/**/*.svg", 'images/**/*.svg'])
+        .pipe(svgstore())
+        .pipe(rename("icon-store.svg"))
+        .pipe(gulp.dest("_site/images/"));
+});
+
 // Deploy _site to gh-pages
-gulp.task('deploy-gh-pages', ['sass-production'], function () {
+gulp.task('deploy-gh-pages', ['icons'], function () {
   return gulp.src('./_site/**/*')
     .pipe(deploy())
 });
