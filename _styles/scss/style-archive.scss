@@ -5,7 +5,9 @@
 @import "rapid";
 
 // Variables
-@import "variables/_all";
+@import "variables/spacing";
+@import "variables/theme-archive";
+@import "variables/colors";
 
 @include rapid-everything;
 

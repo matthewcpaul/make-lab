@@ -1,0 +1,39 @@
+// Backgrounds
+$background: color("white", 0);
+$background-alt: color("cool-white", 2);
+$background-modal: color("black", 100);
+
+//Borders
+$border: color("cool-gray", 1);
+
+// Typography
+$text-background: color("white", 0);
+$text-meta: color("cool-gray", 40);
+$text-body: color("cool-gray", 60);
+$text-heading: color("cool-gray", 80);
+$text-link: color("cool-gray", 80);
+$text-link-hover: color("indigo", 60);
+$text-code: color("aqua", 50);
+$text-success: color("green", 50);
+$text-error: color("red", 50);
+
+// Primarys
+$primary-light: color("green", 10);
+$primary: color("green", 50);
+$primary-medium: color("green", 70);
+$primary-dark: color("green", 80);
+
+// Accents
+$accent-light: color("aqua", 10);
+$accent: color("aqua", 20);
+$accent-neutral: color("cool-gray", 30);
+
+// Icons
+$icon-neutral: color("cool-gray", 30);
+$icon-dark: color("cool-gray", 80);
+$icon-primary-light: color("green", 10);
+$icon-primary: color("red", 60);
+
+// Status
+$status-success: color("green", 50);
+$status-error: color("red", 50);

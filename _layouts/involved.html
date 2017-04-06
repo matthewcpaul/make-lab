@@ -1,0 +1,20 @@
+{% include root-involved.html %}
+
+	<div class="o-band o-band--primary c-header--fixed">
+	  <div class="o-wrap">
+			{% include header.html %}
+		</div>
+	</div>
+
+	<main class="o-main" role="main">
+		<div class="o-band o-band--primary u-py-xxl">
+			<div class="o-wrap">
+		  	<h1 class="f0 f-bold f-background">{{ page.title }}</h1>
+			</div>
+		</div>
+		<div class="o-wrap">
+			{{ content }}
+		</div>
+	</main>
+
+{% include footer.html %}

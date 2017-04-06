@@ -1,0 +1,16 @@
+/// Global grid breakpoint variables
+$grid-breakpoints: (
+  sm: 35em,
+  md: 46em,
+  lg: 64em
+);
+
+/// Global wrap object max width variables
+$wrap-max-widths: (
+  xs: 100%,
+  sm: 100%,
+  md: 100%,
+  lg: 75rem
+);
+
+$header-x-padding: 0;
