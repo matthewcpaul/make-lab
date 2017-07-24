@@ -26,7 +26,7 @@ gulp.task('sass', ['local-build'], function() {
 });
 
 // Icons
-gulp.task('icons', () => {
+gulp.task('icons', ['sass'], function() {
   return gulp.src(['node_modules/ibm-design-icons/dist/svg/**/*.svg', 'images/**/*.svg'])
     .pipe(svgstore())
     .pipe(rename('icon-store.svg'))
@@ -37,7 +37,7 @@ gulp.task('icons', () => {
 gulp.task('local-build', shell.task(['bundle exec jekyll build --config _config.yml, local_config.yml']));
 
 // Start a local server with browser-sync + watch for changes
-gulp.task('serve', ['sass'], function() {
+gulp.task('serve', ['icons'], function() {
   browserSync.init({
     server: { baseDir: '_site/' }
   });
@@ -54,7 +54,7 @@ gulp.task('default', ['serve']);
 gulp.task('production-build', shell.task(['bundle exec jekyll build']));
 
 // Deploy _site to gh-pages
-gulp.task('deploy-gh-pages', ['production-build', 'sass', 'icons'], function () {
+gulp.task('deploy-gh-pages', ['icons'], function () {
   return gulp.src('./_site/**/*')
     .pipe(deploy())
 });
