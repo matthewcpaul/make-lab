@@ -10,6 +10,9 @@ var deploy       = require('gulp-gh-pages');
 var svgstore     = require('gulp-svgstore');
 var rename       = require('gulp-rename');
 
+// Build incrementally with _config.yml + local_config.yml for development
+gulp.task('local-build', shell.task(['bundle exec jekyll build --config _config.yml, local_config.yml']));
+
 // Compile SCSS into CSS, sourcemaps, autoprefixer, cssnano + auto-inject into browsers
 gulp.task('sass', ['local-build'], function() {
   return gulp.src(['_styles/scss/style-archive.scss', '_styles/scss/style-events.scss', '_styles/scss/style-involved.scss', '_styles/scss/style-about.scss'])
@@ -25,16 +28,13 @@ gulp.task('sass', ['local-build'], function() {
   .pipe(browserSync.stream());
 });
 
-// Icons
+// Create icon-store.svg
 gulp.task('icons', ['sass'], function() {
   return gulp.src(['node_modules/ibm-design-icons/dist/svg/**/*.svg', 'images/**/*.svg'])
     .pipe(svgstore())
     .pipe(rename('icon-store.svg'))
     .pipe(gulp.dest('_site/images/'));
 });
-
-// Build incrementally with _config.yml + local_config.yml for development
-gulp.task('local-build', shell.task(['bundle exec jekyll build --config _config.yml, local_config.yml']));
 
 // Start a local server with browser-sync + watch for changes
 gulp.task('serve', ['icons'], function() {
@@ -50,11 +50,14 @@ gulp.task('serve', ['icons'], function() {
 // Run sass, local-build, and serve
 gulp.task('default', ['serve']);
 
-// Build once with only _config.yml for production
-gulp.task('production-build', shell.task(['bundle exec jekyll build']));
+// Pipe CNAME to _site
+gulp.task('cname', function() {
+  return gulp.src(['CNAME'])
+    .pipe(gulp.dest('_site/'));
+});
 
 // Deploy _site to gh-pages
-gulp.task('deploy-gh-pages', ['icons'], function () {
+gulp.task('deploy-gh-pages', ['icons', 'cname'], function () {
   return gulp.src('./_site/**/*')
     .pipe(deploy())
 });
