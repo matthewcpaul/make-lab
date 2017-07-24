@@ -1,8 +1,8 @@
 # Site Config
 name: "IBM Make Lab"
 description: A website for the IBM Make Lab
-baseurl: "/make-lab"
-url: https://matthewcpaul.github.io/make-lab
+baseurl: "/"
+url: https://ibmmakelab.com
 
 # Build Settings
 markdown: kramdown

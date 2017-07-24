@@ -1,18 +1,18 @@
 <header class="c-header" role="banner">
   <div class="o-flag">
     <div class="o-flag__body">
-      <a class="f-bold c-header__title" href="{{ "/" | prepend: site.baseurl }}">{{ site.name }}</a>
+      <a class="f-bold c-header__title" href="{{ site.baseurl }}">{{ site.name }}</a>
     </div>
     <div class="o-flag__right c-header__menu u-pl-trim">
       <svg class="c-header__svg" width="20" height="20" viewBox="0 0 20 20">
-        <use xlink:href="{{ "/images/icon-store.svg#hamburger_20" | prepend: site.baseurl }}"></use>
+        <use xlink:href="{{ "/images/icon-store.svg#hamburger_20" }}"></use>
       </svg>
     </div>
   </div>
   <nav class="" role="navigation">
     <ul class="f-list-trim c-primary-nav">{% assign pages = site.pages | sort:"order" %}{% for p in pages %}{% if p.order >= 1 %}
       <li class="c-primary-nav__item">
-        <a {% if p.url == page.url %}class="c-primary-nav__link active"{% else %}class="c-primary-nav__link"{% endif %} href="{{ p.url | prepend: site.baseurl }}">{{ p.title }}</a>
+        <a {% if p.url == page.url %}class="c-primary-nav__link active"{% else %}class="c-primary-nav__link"{% endif %} href="{{ p.url }}">{{ p.title }}</a>
       </li>{% endif %}{% endfor %}
     </ul>
   </nav>
