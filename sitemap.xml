@@ -1,22 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://matthewcpaul.github.io/make-lab/make-lab/2016/07/06/title/</loc>
-<lastmod>2016-07-06T00:00:00-05:00</lastmod>
+<loc>https://ibmmakelab.com//about/</loc>
 </url>
 <url>
-<loc>https://matthewcpaul.github.io/make-lab/make-lab/get-involved/get-involved/</loc>
+<loc>https://ibmmakelab.com//events/</loc>
 </url>
 <url>
-<loc>https://matthewcpaul.github.io/make-lab/make-lab/events/</loc>
+<loc>https://ibmmakelab.com//get-involved/</loc>
 </url>
 <url>
-<loc>https://matthewcpaul.github.io/make-lab/make-lab/archive/</loc>
-</url>
-<url>
-<loc>https://matthewcpaul.github.io/make-lab/make-lab/about/</loc>
-</url>
-<url>
-<loc>https://matthewcpaul.github.io/make-lab/make-lab/</loc>
+<loc>https://ibmmakelab.com//</loc>
 </url>
 </urlset>
