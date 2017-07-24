@@ -1,5 +1,5 @@
 ---
 layout: involved
 title: Get Involved
-order: 3
+order: 0
 ---

@@ -1,7 +1,7 @@
 ---
 layout: events
 title: Events
-order: 2
+order: 0
 ---
 <div class="c-card">
     <div class="c-card__body">

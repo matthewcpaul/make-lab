@@ -42,8 +42,8 @@ gulp.task('serve', ['icons'], function() {
     server: { baseDir: '_site/' }
   });
 
-  gulp.watch('_styles/scss/**/*.scss', ['sass']);
-  gulp.watch(['_includes/*.html', '_layouts/*.html', 'index.md', '**/index.md'], ['sass']);
+  gulp.watch('_styles/scss/**/*.scss', ['icons']);
+  gulp.watch(['_includes/*.html', '_layouts/*.html', 'index.md', '**/index.md'], ['icons']);
   gulp.watch('_site/**/*.*').on('change', browserSync.reload);
 });
 
