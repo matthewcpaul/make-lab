@@ -1,4 +1,10 @@
 .c-pane {
+  list-style-type: none;
+  position: relative;
+
+  &__link {
+    display: block;
+  }
 
   &__overlay {
     position: absolute;
@@ -12,8 +18,11 @@
     overflow: hidden;
   }
 
-  &:hover .c-pane__overlay {
-    opacity: .8;
+  &:hover {
     cursor: pointer;
+
+    & .c-pane__overlay {
+      opacity: .8;
+    }
   }
 }

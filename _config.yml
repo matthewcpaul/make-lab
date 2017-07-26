@@ -22,5 +22,6 @@ assets:
 
 # Read and Output Collections
 collections:
-  commands:
-    output: false
+  archive:
+    output: true
+    permalink: /archive/:path/

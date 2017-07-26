@@ -43,7 +43,7 @@ gulp.task('serve', ['icons'], function() {
   });
 
   gulp.watch('_styles/scss/**/*.scss', ['icons']);
-  gulp.watch(['_includes/*.html', '_layouts/*.html', 'index.md', '**/index.md'], ['icons']);
+  gulp.watch(['_includes/*.html', '_layouts/*.html', 'index.md', '**/*.md'], ['icons']);
   gulp.watch('_site/**/*.*').on('change', browserSync.reload);
 });
 
