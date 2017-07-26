@@ -16,7 +16,7 @@ order: 1
             <h3 class="f3 f-bold f-background u-mb-xs u-truncate">{{ archive.title }}</h3>
             <div class="u-mb-xxs">
               <span class="f-bold f-background">Size:</span>
-              <span class="f-background">{{ archive.width }}" x {{ archive.height }}"</span>
+              <span class="f-background">{{ archive.width }}" &times; {{ archive.height }}"</span>
             </div>
             <div class="u-mb-xxs">
               <span class="f-bold f-background">Paper:</span>
