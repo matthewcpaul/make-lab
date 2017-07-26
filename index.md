@@ -22,7 +22,7 @@ order: 1
               <span class="f-bold f-background">Paper:</span>
               <span class="f-background">{{ archive.paper }}, {{ archive.weight }}</span>
             </div>
-            <div class="u-mb-xxs">
+            <div>
               <span class="f-bold f-background">Colors:</span>
               <span class="f-background">{{ archive.colors }}</span>
             </div>

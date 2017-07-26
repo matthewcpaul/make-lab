@@ -1,0 +1,43 @@
+{% include root-archive.html %}
+
+	<div class="o-band o-band--primary c-header--fixed">
+	  <div class="o-wrap">
+			{% include header.html %}
+		</div>
+	</div>
+
+	<main class="o-main" role="main">
+		<div class="c-hero">
+			<img src="/images/{{ page.thumbnail }}.jpg" alt="">
+		</div>
+		<div class="o-band u-py-xl">
+			<div class="o-wrap">
+		  	<h1 class="f0 f-bold">{{ page.title }}</h1>
+				<p class="f3 u-mt-xs">Screen Printing</p>
+				<div class="o-block-grid u-mt-md">
+					<div class="o-block-grid__block--full _md-o-block-grid__block--third">
+						<h4 class="f4 f-bold">Introduction</h4>
+						<p>{{ page.introduction }}</p>
+					</div>
+					<div class="o-block-grid__block--full _md-o-block-grid__block--third">
+						<h4 class="f4 f-bold">Details</h4>
+              <p><span>Size:</span> {{ page.width }}" &times; {{ page.height }}</p>
+							<p><span>Paper:</span> {{ page.paper }}, {{ page.weight }}</p>
+							<p><span>Colors:</span> {{ page.colors }}</p>
+					</div>
+					<div class="o-block-grid__block--full _md-o-block-grid__block--third">
+						<h4 class="f4 f-bold">Made by</h4>
+						<p>Matthew Paul</p>
+						<p>Patrick Chew</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="o-band">
+			<div class="o-wrap">
+		  	{{ content }}
+			</div>
+		</div>
+	</main>
+
+{% include footer.html %}
