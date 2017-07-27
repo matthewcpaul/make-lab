@@ -1,6 +1,6 @@
 # Site Config
 name: "IBM Make Lab"
-description: A website for the IBM Make Lab
+description: The Make Lab is a maker space at IBM, providing IBMers in Austin with the means to take a creative break and make something with their hands.
 baseurl: "/"
 url: https://ibmmakelab.com
 
