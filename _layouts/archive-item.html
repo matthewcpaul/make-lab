@@ -10,33 +10,31 @@
 		<div class="c-hero">
 			<img src="/images/{{ page.thumbnail }}.jpg" alt="">
 		</div>
-		<div class="o-band u-py-xl">
+		<div class="o-band u-py-lg _sm-u-py-xl _md-u-py-xxl">
 			<div class="o-wrap">
 		  	<h1 class="f0 f-bold">{{ page.title }}</h1>
-				<p class="f3 u-mt-xs">Screen Printing</p>
-				<div class="o-block-grid u-mt-md">
-					<div class="o-block-grid__block--full _md-o-block-grid__block--third">
-						<h4 class="f4 f-bold">Introduction</h4>
+				<div class="o-grid u-mt-md _md-u-mt-lg">
+					<div class="o-col--12 _sm-o-col--12 _md-o-col--6 _lg-o-col--7">
+						<h4 class="f4 f-bold">Description</h4>
 						<p>{{ page.introduction }}</p>
 					</div>
-					<div class="o-block-grid__block--full _md-o-block-grid__block--third">
+					<div class="o-col--12 _sm-o-col--8 _md-o-col--4 _lg-o-col--3 u-mt-md _md-u-mt-trim">
 						<h4 class="f4 f-bold">Details</h4>
-              <p><span>Size:</span> {{ page.width }}" &times; {{ page.height }}</p>
-							<p><span>Paper:</span> {{ page.paper }}, {{ page.weight }}</p>
-							<p><span>Colors:</span> {{ page.colors }}</p>
+            <p><span>Size:</span> {{ page.width }}" &times; {{ page.height }}</p>
+						<p><span>Paper:</span> {{ page.paper }}, {{ page.weight }}</p>
+						<p><span>Colors:</span> {{ page.colors }}</p>
 					</div>
-					<div class="o-block-grid__block--full _md-o-block-grid__block--third">
-						<h4 class="f4 f-bold">Made by</h4>
-						<p>Matthew Paul</p>
-						<p>Patrick Chew</p>
+					<div class="o-col--12 _sm-o-col--4 _md-o-col--2 u-mt-md _md-u-mt-trim">
+						<h4 class="f4 f-bold">Makers</h4>
+						{% for maker in page.makers %}
+						<p>{{ maker }}</p>
+						{% endfor %}
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="o-band">
-			<div class="o-wrap">
-		  	{{ content }}
-			</div>
+	  	{{ content }}
 		</div>
 	</main>
 

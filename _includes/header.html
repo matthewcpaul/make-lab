@@ -10,10 +10,19 @@
     </div>
   </div>
   <nav class="" role="navigation">
-    <ul class="f-list-trim c-primary-nav">{% assign pages = site.pages | sort:"order" %}{% for p in pages %}{% if p.order >= 1 %}
+    <ul class="f-list-trim c-primary-nav">
+      {% assign pages = site.pages | sort:"order" %}
+      {% for p in pages %}
+      {% if p.order >= 1 %}
       <li class="c-primary-nav__item">
-        <a {% if p.url == page.url %}class="c-primary-nav__link active"{% else %}class="c-primary-nav__link"{% endif %} href="{{ p.url }}">{{ p.title }}</a>
-      </li>{% endif %}{% endfor %}
+        {% if p.url == page.url %}
+        <a class="c-primary-nav__link active" href="{{ p.url }}">{{ p.title }}</a>
+        {% else %}
+        <a class="c-primary-nav__link" href="{{ p.url }}">{{ p.title }}</a>
+        {% endif %}
+      </li>
+      {% endif %}
+      {% endfor %}
     </ul>
   </nav>
 </header>

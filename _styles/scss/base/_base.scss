@@ -2,3 +2,18 @@
   background: $primary;
   color: $background;
 }
+
+.f0 {
+  font-size: 2.5rem;
+
+  @include screen(sm) {
+    font-size: 3.5rem;
+  }
+}
+
+._md-u-mt-trim {
+
+  @include screen(md) {
+    margin-top: 0 !important;
+  }
+}
