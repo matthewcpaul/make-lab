@@ -9,5 +9,5 @@ paper: 'French Smart White'
 weight: '80C'
 colors: '5'
 makers:
-  - Oen Hammonds
+  - 'Oen Hammonds'
 ---

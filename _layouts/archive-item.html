@@ -20,7 +20,7 @@
 					</div>
 					<div class="o-col--12 _sm-o-col--8 _md-o-col--4 _lg-o-col--3 u-mt-md _md-u-mt-trim">
 						<h4 class="f4 f-bold">Details</h4>
-            <p><span>Size:</span> {{ page.width }}" &times; {{ page.height }}</p>
+            <p><span>Size:</span> {{ page.width }}" &times; {{ page.height }}"</p>
 						<p><span>Paper:</span> {{ page.paper }}, {{ page.weight }}</p>
 						<p><span>Colors:</span> {{ page.colors }}</p>
 					</div>
@@ -34,7 +34,9 @@
 			</div>
 		</div>
 		<div class="o-band">
-	  	{{ content }}
+			<div class="o-wrap">
+				{{ content }}
+			</div>
 		</div>
 	</main>
 

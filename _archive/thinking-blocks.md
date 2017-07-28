@@ -9,6 +9,6 @@ paper: 'French Midnight Blue'
 weight: '100C'
 colors: '4'
 makers:
-  - Matthew Paul
-  - Patrick Chew
+  - 'Matthew Paul'
+  - 'Patrick Chew'
 ---

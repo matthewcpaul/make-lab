@@ -9,7 +9,7 @@ paper: 'French Black Licorice'
 weight: '100C'
 colors: '1'
 makers:
-  - Stephen Nixon
+  - 'Stephen Nixon'
 ---
 
 ![Studios NY](/images/studios_new-york.jpg)
