@@ -13,12 +13,12 @@ order: 1
         <a class="c-pane__link" href="{{ archive.url }}">
           <img src="/images/{{ archive.thumbnail }}.jpg" alt="">
           <div class="c-pane__overlay">
-            <h3 class="f3 f-bold f-background u-mb-xs u-truncate">{{ archive.title }}</h3>
+            <h3 class="f2 f-bold f-background u-mb-xs u-truncate">{{ archive.title }}</h3>
             <div class="u-mb-xxs">
               <span class="f-bold f-background">Size:</span>
               <span class="f-background">{{ archive.width }}" &times; {{ archive.height }}"</span>
             </div>
-            <div class="u-mb-xxs">
+            <div class="u-mb-xxs u-truncate">
               <span class="f-bold f-background">Paper:</span>
               <span class="f-background">{{ archive.paper }}, {{ archive.weight }}</span>
             </div>

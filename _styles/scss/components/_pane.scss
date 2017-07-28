@@ -12,10 +12,14 @@
     left: 0;
     width: 100%;
     height: 100%;
-    padding: spacing(lg);
+    padding: spacing(sm);
     opacity: 0;
     background-color: $background-modal;
     overflow: hidden;
+
+    @include screen(sm) {
+      padding: spacing(lg);
+    }
   }
 
   &:hover {
